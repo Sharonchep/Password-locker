@@ -16,3 +16,9 @@ This is a project that enables clients to store and retrieve their credentials u
 6. Display existing credential
 7. Search credential by account name
 8. Exit the page
+
+## Setup/Installation requirements
+1. Clone or download and unzip the repository from github https://github.com/Sharonchep/Password-locker.git
+2. cd into the project folder and open in the text editor code.
+3. Then run chmod +x run.pyon your project directory.
+Run ./run.py to launch the program
