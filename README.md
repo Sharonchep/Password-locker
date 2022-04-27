@@ -22,3 +22,15 @@ This is a project that enables clients to store and retrieve their credentials u
 2. cd into the project folder and open in the text editor code.
 3. Then run chmod +x run.pyon your project directory.
 Run ./run.py to launch the program
+
+## Technologies Used
+   . PYTHON
+   . GIT
+
+## Support and details
+My technical Mentor is Daniel Karanja, and my email is sharonchepkirui30@gmail.com
+
+## License
+license under MIT license
+
+## 
