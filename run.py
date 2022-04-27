@@ -66,4 +66,34 @@ def main():
                            print("\n")
                            print(f"New Credential {account} {account_username} {account_password} has been created")
                            print("\n")
+                           
+                           
+        elif short_code == "gp":
+                        print("Please enter the account you want to generate password for > ")
+                        social_media = input("Enter account type > ")
+
+                        def random_password(string_length):
+                            letters = string.ascii_letters
+                            return "".join(random.choice(letters) for i in range(string_length))
+
+                        print(f"Your random password for {social_media} is:", random_password(8))
+
+        elif short_code == "dc":
+                        if display_credential():
+                            print("Here is a list of credentials and password")
+                            print("\n")
+                        else:
+                            print("\n")
+                            print("You dont have any saved credential, try saving one")
+                            print("\n")
+        elif short_code == "fc":
+                        print("Enter the account username you are searching")
+                        search_account_username = input()
+                        if check_existing_credential(search_account_username):
+                            search_credential = find_credential(search_account_username)
+                            print(f"{search_credential.account} {search_credential.account_username}")
+                            print('_'*20)
+                            print(f"Account password...{search_credential.account_password}")
+                        else:
+                            print("The credential does not exist.Try to resign in")
 
