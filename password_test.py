@@ -24,4 +24,18 @@ class TestUser(unittest.TestCase):
 
              self.new_user.delete_user()
              self.assertEqual(len(User.user_list), 1)
+
+class TestCredential(unittest.TestCase):
+         def setUp(self):
+             self.new_credential = credential("facebook", "Ace", "12345")
+         def tearDown(self):
+             Credential.credential_list = []
+         def test_init(self):
+                 self.assertEqual(self.new_credential.account, "facebook")
+                 self.assertEqual(self.new_credential.account_username, "Ace")
+                 self.assertEqual(self.new_credential.account_password, "12345")
+         def test_save_credential(self):
+                 self.new_credential.save_credential()
+                 self.assertEqual(len(Credential.credential_list), 1)
+
     
