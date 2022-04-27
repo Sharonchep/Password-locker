@@ -44,4 +44,26 @@ def main():
             print(""*67)
             getpass.getpass()
             print("You are logged in")
+            while True:
+
+                       print("Use these short codes : cc - create a new credential, dc - display credential, fc - find credential, dl - delete credential, gp - generate random password, ex - exit the credential list")
+                       short_code = input().lower()
+                       if short_code == 'cc':
+                           print("create account")
+                           print("_"*10)
+                           
+                           print("Account.....")
+                           account = input(">")
+
+                           print("usename....")
+                           account_username = input(">")
+
+                           print("Enter password")
+                           account_password = input(">")
+
+                           save_credential(create_credential(account, account_username, account_password))
+
+                           print("\n")
+                           print(f"New Credential {account} {account_username} {account_password} has been created")
+                           print("\n")
 
