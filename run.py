@@ -26,4 +26,22 @@ def check_existing_credential(account_username):
     return Credential.find_by_account_username(account_username)
 def display_credential():
     return Credential.display_all_credential()
+    
+def main():
+    user_name = input("Enter your name >")
+    print(f"Hello {user_name}, Welcome to password locker")
+    print("\n")
+    ask = input(f"Hello {user_name}. Do you have an account? YES/NO >").lower()
+    if ask == "no":
+        print("Sign up with password locker to get signed")
+        user_name = input("Enter your User name >")
+        create = input(
+            f"Hello{user_name}.Do you want a generated password? YES/NO >"
+        )
+        if create == "no":
+            print("_"*167)
+            print("|Passwords may not be visible coz they are secured|")
+            print(""*67)
+            getpass.getpass()
+            print("You are logged in")
 
