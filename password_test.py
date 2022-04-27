@@ -45,6 +45,27 @@ class TestCredential(unittest.TestCase):
              self.new_credential.save_credential(self)
              test_credential = credential("twitter", "Ashley", "0000")
              test_credential.save_credential()
+             
+             self.new_credential.delete_credential()
+             self.assertEqual(len(Credential.credential_list), 1)
+         def test_find_credential_by_account_username(self):
+             self.new_credential.save_credential()
+             test_credential = Credential("facebook", "Sharon", "2923")
+             test_credential.save_credential()
+             found_credential = credential.find_by_account_username("Sharon")
+             self.assertEqual(found_credential.account_password, test_credential.account_password)
+         def test_credential_exists(self):
+             self.new_credential.save_credential()
+             test_credential = Credential("facebook", "Sharon", "2923")
+             test_credential.save_credential()
+             credential_exists = Credential.credential_exists("Sharon")
+             self.assertTrue(test_credential_exists)
+         def test_display_all_credentials(self):
+             self.assertEqual(Credential.display_credentials(),Credential.credential_list)
+
+if _name_ == '_main_':
+    unittest.main()
+    
 
 
     
