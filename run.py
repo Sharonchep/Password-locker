@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python3.6
 from password import User, Credential
 import random #Generate random numbers for various distributions including integer and floats.
 import string #string module allows you to create and customize your own string
@@ -26,7 +26,7 @@ def check_existing_credential(account_username):
     return Credential.find_by_account_username(account_username)
 def display_credential():
     return Credential.display_all_credential()
-    
+
 def main():
     user_name = input("Enter your name >")
     print(f"Hello {user_name}, Welcome to password locker")
@@ -66,8 +66,7 @@ def main():
                            print("\n")
                            print(f"New Credential {account} {account_username} {account_password} has been created")
                            print("\n")
-                           
-                           
+
         elif short_code == "gp":
                         print("Please enter the account you want to generate password for > ")
                         social_media = input("Enter account type > ")
@@ -96,7 +95,7 @@ def main():
                             print(f"Account password...{search_credential.account_password}")
                         else:
                             print("The credential does not exist.Try to resign in")
-                            
+
         elif short_code == "dl":
                         print("Enter the account username your will like to delete.")
                         my_delete = input(">")
@@ -112,7 +111,3 @@ def main():
                         print("please check your entry")
 if __name__ == '__main__':
     main() 
-#if _name_ == '_main_':
- #   main()
-
-
