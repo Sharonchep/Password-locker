@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.6
+#!/usr/bin/env python3.8
 from password import User, Credential
 import random #Generate random numbers for various distributions including integer and floats.
 import string #string module allows you to create and customize your own string
@@ -40,7 +40,7 @@ def main():
         )
         if create == "no":
             print("_"*167)
-            print("|Passwords may not be visible coz they are secured|")
+            print("|Passwords may not be visible because they are secured|")
             print(""*67)
             getpass.getpass()
             print("You are logged in")
@@ -55,7 +55,7 @@ def main():
                            print("Account.....")
                            account = input(">")
 
-                           print("usename....")
+                           print("username....")
                            account_username = input(">")
 
                            print("Enter password")
